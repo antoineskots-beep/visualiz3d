@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Framework — websites for local businesses</title>
+<title>Visualiz3d — websites for local businesses</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 
 <header>
   <nav>
-    <div class="brand">Framework</div>
+    <div class="brand">Visualiz3d</div>
     <div class="links">
       <a href="#pricing">Pricing</a>
       <a href="#process">Process</a>
@@ -122,18 +122,18 @@
 <section class="wrap" id="quote">
   <div class="sec-head">
     <h2>Get a quote</h2>
-    <p>A few questions, and you'll know your tier before a call.</p>
+    <p>A few questions, and we'll know exactly how to help.</p>
   </div>
 
   <div class="intake">
     <div class="intake-top">
-      <strong id="stepTitle">Step 1 of 5</strong>
-      <span class="progress-track" id="stepTrack">business — site — goal — timeline — budget</span>
+      <strong id="stepTitle">Step 1 of 6</strong>
+      <span class="progress-track" id="stepTrack">business — site — inspiration — goal — timeline — budget</span>
     </div>
 
     <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="3ec05df0-7701-40bd-8a45-75ef6e27fb7f">
-      <input type="hidden" name="subject" value="New quote request — Framework site">
+      <input type="hidden" name="subject" value="New quote request — Visualiz3d site">
       <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
       <div id="formError" class="low-budget-note" style="display:none;"></div>
@@ -149,6 +149,11 @@
       </div>
 
       <div class="step-panel" data-step="3">
+        <div class="field"><label for="inspoSite">Any website whose look you like? (optional)</label>
+        <input id="inspoSite" name="Inspiration site" type="text" placeholder="Paste a link, or leave blank"></div>
+      </div>
+
+      <div class="step-panel" data-step="4">
         <div class="field"><label>What's the main goal?</label>
           <div class="opts">
             <div class="opt" data-group="goal">More phone calls</div>
@@ -160,7 +165,7 @@
         </div>
       </div>
 
-      <div class="step-panel" data-step="4">
+      <div class="step-panel" data-step="5">
         <div class="field"><label>How soon do you need it live?</label>
           <div class="opts">
             <div class="opt" data-group="timeline">ASAP — 2 weeks</div>
@@ -171,7 +176,7 @@
         </div>
       </div>
 
-      <div class="step-panel" data-step="5">
+      <div class="step-panel" data-step="6">
         <div class="field"><label>Which budget range fits?</label>
           <div class="opts">
             <div class="opt" data-group="budget"><strong>$300–$500</strong><span>Starter</span></div>
@@ -188,11 +193,7 @@
         <div class="confirm">
           <div class="check">✓</div>
           <h3 style="margin-bottom:10px;">You're qualified for a build slot.</h3>
-          <p style="color:var(--ink-soft); max-width:44ch; margin:0 auto 22px;">Your answers are on their way to us. Next: a 15-minute discovery call, or request a direct invoice to lock the slot now.</p>
-          <div class="cta-row" style="justify-content:center;">
-            <a href="#" class="btn">Book a 15-min call</a>
-            <a href="#" class="btn btn-ghost">Request an invoice</a>
-          </div>
+          <p style="color:var(--ink-soft); max-width:44ch; margin:0 auto 22px;">Thanks — your answers are on their way to us. We'll reach out to you shortly.</p>
         </div>
       </div>
 
@@ -206,7 +207,7 @@
 
 <footer>
   <div class="wrap foot-row">
-    <div class="brand">Framework</div>
+    <div class="brand">Visualiz3d</div>
     <p>Sites built and shipped for local businesses. Deposit-to-launch, no surprises on the invoice.</p>
   </div>
 </footer>

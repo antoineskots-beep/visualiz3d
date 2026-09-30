@@ -1,11 +1,11 @@
-const steps = ['1','2','3','4','5','done'];
+const steps = ['1','2','3','4','5','6','done'];
 let idx = 0;
 const panels = document.querySelectorAll('.step-panel');
 const nextBtn = document.getElementById('nextBtn');
 const backBtn = document.getElementById('backBtn');
 const stepTitle = document.getElementById('stepTitle');
 const stepTrack = document.getElementById('stepTrack');
-const trackLabels = ['business','site','goal','timeline','budget'];
+const trackLabels = ['business','site','inspiration','goal','timeline','budget'];
 const quoteForm = document.getElementById('quoteForm');
 const formError = document.getElementById('formError');
 
@@ -18,7 +18,7 @@ function render(){
     nextBtn.style.display = 'inline-flex';
     nextBtn.disabled = false;
     nextBtn.textContent = idx === steps.length - 2 ? 'Send' : 'Continue';
-    stepTitle.textContent = `Step ${idx+1} of 5`;
+    stepTitle.textContent = `Step ${idx+1} of ${trackLabels.length}`;
     stepTrack.innerHTML = trackLabels.map((l,i)=> i===idx ? `<strong style="color:var(--ink)">${l}</strong>` : l).join(' — ');
   }
 }

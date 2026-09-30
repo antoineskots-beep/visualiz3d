@@ -131,12 +131,12 @@
       <span class="progress-track" id="stepTrack">business — site — goal — timeline — budget</span>
     </div>
 
-    <form id="quoteForm" action="https://formsubmit.co/antoineskots@hotmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New quote request — Framework site">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" id="nextUrl" value="">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="3ec05df0-7701-40bd-8a45-75ef6e27fb7f">
+      <input type="hidden" name="subject" value="New quote request — Framework site">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div id="formError" class="low-budget-note" style="display:none;"></div>
 
       <div class="step-panel active" data-step="1">
         <div class="field"><label for="bizName">What's the name of your business, and what do you do?</label>

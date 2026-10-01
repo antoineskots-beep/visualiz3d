@@ -11,7 +11,7 @@ const formError = document.getElementById('formError');
 
 function render(){
   panels.forEach(p => p.classList.toggle('active', p.dataset.step === steps[idx]));
-  backBtn.style.visibility = idx === 0 ? 'hidden' : 'visible';
+  backBtn.style.visibility = (idx === 0 || steps[idx] === 'done') ? 'hidden' : 'visible';
   if(steps[idx] === 'done'){
     nextBtn.style.display = 'none'; stepTitle.textContent = 'Done';
   } else {
@@ -56,6 +56,7 @@ async function submitQuote(){
     if (result.success) {
       idx = steps.length - 1;
       render();
+      setTimeout(() => { window.location.href = 'thank-you.html'; }, 600);
     } else {
       throw new Error(result.message || 'Something went wrong.');
     }

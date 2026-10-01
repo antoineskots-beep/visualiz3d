@@ -10,13 +10,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
-<!--
-  CONVERSION TRACKING
-  ===================
-  This page only loads after a quote form is successfully submitted,
-  so it's the right place to fire conversion tags.
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1078667111753824');
+fbq('track', 'PageView');
+fbq('track', 'Lead');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1078667111753824&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
-  GOOGLE ADS — replace AW-XXXXXXXXX / AW-XXXXXXXXX/XXXXXXXXXXXXXXXXXXXX
+<!--
+  GOOGLE ADS — optional, separate from Meta.
+  Replace AW-XXXXXXXXX / AW-XXXXXXXXX/XXXXXXXXXXXXXXXXXXXX
   with your actual Conversion ID + Label from Google Ads > Tools > Conversions.
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
@@ -26,14 +41,6 @@
     gtag('js', new Date());
     gtag('config', 'AW-XXXXXXXXX');
     gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXXXXXXXXXX'});
-  </script>
-
-  META / FACEBOOK PIXEL — replace YOUR_PIXEL_ID with your actual Pixel ID
-  from Meta Events Manager. If the Pixel base code is already on index.html,
-  just add the "Lead" event call here (no need to repeat the base code).
-
-  <script>
-    fbq('track', 'Lead');
   </script>
 -->
 

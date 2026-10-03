@@ -1,13 +1,15 @@
-const steps = ['1','2','3','4','5','6','done'];
+const steps = ['1','2','3','4','5','6','7','done'];
 let idx = 0;
 const panels = document.querySelectorAll('.step-panel');
 const nextBtn = document.getElementById('nextBtn');
 const backBtn = document.getElementById('backBtn');
 const stepTitle = document.getElementById('stepTitle');
 const stepTrack = document.getElementById('stepTrack');
-const trackLabels = ['business','site','inspiration','goal','timeline','budget'];
+const trackLabels = ['business','site','inspiration','contact','goal','timeline','budget'];
 const quoteForm = document.getElementById('quoteForm');
 const formError = document.getElementById('formError');
+const contactEmail = document.getElementById('contactEmail');
+const contactPhone = document.getElementById('contactPhone');
 
 function render(){
   panels.forEach(p => p.classList.toggle('active', p.dataset.step === steps[idx]));
@@ -69,6 +71,14 @@ async function submitQuote(){
 }
 
 nextBtn.addEventListener('click', () => {
+  if (steps[idx] === '4') {
+    formError.style.display = 'none';
+    if (!contactEmail.value.trim() || !contactPhone.value.trim()) {
+      formError.textContent = "We'll need both an email and a phone number to follow up.";
+      formError.style.display = 'block';
+      return;
+    }
+  }
   if (idx === steps.length - 2) {
     submitQuote();
     return;
